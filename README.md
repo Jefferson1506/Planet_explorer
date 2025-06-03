@@ -29,14 +29,9 @@ Una aplicación Flutter responsiva que permite explorar planetas utilizando dato
 
 Organizada en una arquitectura limpia:
 
-lib/
-├── main.dart               # Punto de entrada de la app
-├── core/                   # Utilidades generales (responsive, providers, tema, etc)
-├── data/                   # Implementación de acceso a datos (APIs, repositorios)
-├── domain/                 # Modelos y entidades del dominio (clases de negocio)
-├── features/
-│   └── planets/            # Módulo específico para la funcionalidad de Planetas
-│       ├── application/    # Lógica de negocio, providers, controladores (Riverpod)
-│       ├── domain/         # Entidades específicas de Planetas (si aplica)
-│       └── presentation/   # Widgets, páginas y componentes UI relacionados a Planetas
-├── router/                 # Configuración y definición de rutas con go_router
+- **main.dart**: Punto de entrada de la aplicación.  
+- **core/**: Utilidades generales (responsive, providers, temas, etc.).  
+- **data/**: Implementación de acceso a datos (APIs, repositorios).  
+- **domain/**: Modelos y entidades del dominio (clases de negocio).  
+- **features/planets/**: Funcionalidad específica de Planetas con su lógica, dominio y presentación.  
+- **router/**: Configuración y definición de rutas usando go_router.
