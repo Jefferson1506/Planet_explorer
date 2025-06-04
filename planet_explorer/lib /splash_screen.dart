@@ -11,6 +11,7 @@ class SplashSolarTheme extends StatelessWidget {
   Widget build(BuildContext context) {
     return ResponsiveBuilder(
       builder: (context, view) {
+        final colorScheme = Theme.of(context).colorScheme;
         return AnimatedSplashScreen(
           splashTransition: SplashTransition.fadeTransition,
           nextScreen: const HomePage(),
@@ -23,16 +24,16 @@ class SplashSolarTheme extends StatelessWidget {
               // Fondo con gradiente
               Positioned.fill(
                 child: Container(
-                  decoration: const BoxDecoration(
+                  decoration: BoxDecoration(
                     gradient: LinearGradient(
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
                       colors: [
-                        Colors.black,
-                        Color.fromARGB(255, 204, 193, 222),
-                        Color.fromARGB(255, 151, 137, 175),
-                        Colors.deepPurple,
-                        Colors.deepPurple,
+                        colorScheme.shadow,
+                        colorScheme.surfaceTint,
+                        colorScheme.primaryContainer,
+                        colorScheme.primary,
+                        colorScheme.primary,
                       ],
                     ),
                   ),
