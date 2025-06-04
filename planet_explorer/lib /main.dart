@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Planet Explorer',
-      theme: ThemeData.dark(), 
+      theme: ThemeData.dark(),
       home: const SplashSolarTheme(),
     );
   }
