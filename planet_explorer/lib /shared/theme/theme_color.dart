@@ -15,7 +15,7 @@ class ColorTheme {
       surfaceTint: Color(0xffbbaaff),
       onPrimary: Color(0xffffffff),
       primaryContainer: Color(0xffddd2ff),
-      onPrimaryContainer: Color(0xff1c1133),
+      onPrimaryContainer: Color.fromARGB(255, 38, 23, 70),
       secondary: Color(0xff675d7d),
       onSecondary: Color(0xffffffff),
       secondaryContainer: Color(0xffe8e0ff),
