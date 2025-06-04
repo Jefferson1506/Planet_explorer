@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'splash_screen.dart';
+import 'router/app_router.dart';
+import 'shared/theme/theme_color.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,11 +11,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    final ColorTheme colorTheme = ColorTheme();
+
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
+      theme: colorTheme.lightTheme,
       title: 'Planet Explorer',
-      theme: ThemeData.dark(),
-      home: const SplashSolarTheme(),
+      routerConfig: router,
     );
   }
 }
