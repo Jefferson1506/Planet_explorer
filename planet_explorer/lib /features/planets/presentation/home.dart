@@ -1,26 +1,51 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lottie/lottie.dart';
 import 'dart:math';
 
+import '../../../core/providers/notifier/theme_prefernce_notifier.dart';
 import '../../../core/responsive/responsive_builder.dart';
+import '../../../shared/widgets/animate.dart';
 import '../../../shared/widgets/button.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends ConsumerWidget {
   const HomePage({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final random = Random();
     final colorScheme = Theme.of(context).colorScheme;
     final listShadow = _shadow(colorScheme);
+    final themeMode = ref.watch(themeProvider);
 
     return SafeArea(
       child: ResponsiveBuilder(
         builder: (context, view) {
           return Scaffold(
             body: Stack(
+              alignment: Alignment.center,
               children: [
                 Container(color: colorScheme.primary),
+                Positioned(
+                  top: view.scaledHeight(0.1),
+                  right: view.scaledWidth(0.1),
+                  child: IconButton(
+                    icon: Icon(
+                      size: view.scaledFont(2.3),
+                      color:
+                          themeMode == ThemeMode.dark
+                              ? Colors.limeAccent
+                              : const Color.fromARGB(255, 166, 255, 248),
+                      themeMode == ThemeMode.dark
+                          ? Icons.wb_sunny
+                          : Icons.nightlight_round,
+                    ),
+                    onPressed: () {
+                      ref.read(themeProvider.notifier).toggleTheme();
+                    },
+                  ),
+                ),
+
                 ...List.generate(100, (index) {
                   final dx =
                       random.nextDouble() * MediaQuery.of(context).size.width;
@@ -103,10 +128,14 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
 
-                Center(
-                  child: CustomButton.gold(
-                    label: 'Ver Planetas',
-                    onPressed: () {},
+                Positioned(
+                  bottom: view.scaledHeight(0.2),
+                  child: AnimateWrapper.zoomIn(
+                    duration: Duration(seconds: 2),
+                    child: CustomButton.gold(
+                      label: 'Ver Planetas',
+                      onPressed: () {},
+                    ),
                   ),
                 ),
               ],
