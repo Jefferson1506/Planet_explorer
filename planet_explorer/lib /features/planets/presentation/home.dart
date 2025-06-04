@@ -3,6 +3,7 @@ import 'package:lottie/lottie.dart';
 import 'dart:math';
 
 import '../../../core/responsive/responsive_builder.dart';
+import '../../../shared/widgets/button.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -99,6 +100,13 @@ class HomePage extends StatelessWidget {
                         ),
                       ],
                     ),
+                  ),
+                ),
+
+                Center(
+                  child: CustomButton.gold(
+                    label: 'Ver Planetas',
+                    onPressed: () {},
                   ),
                 ),
               ],
