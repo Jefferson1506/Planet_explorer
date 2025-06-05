@@ -1,17 +1,17 @@
 class Planet {
   final String name;
-  final int orbitalDistanceKm;
-  final int equatorialRadiusKm;
-  final int volumeKm3;
+  final String orbitalDistanceKm;
+  final String equatorialRadiusKm;
+  final String volumeKm3;
   final String massKg;
-  final double densityGCm3;
-  final double surfaceGravityMS2;
-  final int escapeVelocityKmh;
-  final double dayLengthEarthDays;
-  final double yearLengthEarthDays;
-  final int orbitalSpeedKmh;
+  final String densityGCm3;
+  final String surfaceGravityMS2;
+  final String escapeVelocityKmh;
+  final String dayLengthEarthDays;
+  final String yearLengthEarthDays;
+  final String orbitalSpeedKmh;
   final String atmosphereComposition;
-  final int moons;
+  final String moons;
   final String image;
   final String description;
 
@@ -35,21 +35,21 @@ class Planet {
 
   factory Planet.fromJson(Map<String, dynamic> json) {
     return Planet(
-      name: json['name'],
-      orbitalDistanceKm: json['orbital_distance_km'],
-      equatorialRadiusKm: json['equatorial_radius_km'],
-      volumeKm3: json['volume_km3'],
-      massKg: json['mass_kg'],
-      densityGCm3: (json['density_g_cm3'] as num).toDouble(),
-      surfaceGravityMS2: (json['surface_gravity_m_s2'] as num).toDouble(),
-      escapeVelocityKmh: json['escape_velocity_kmh'],
-      dayLengthEarthDays: (json['day_length_earth_days'] as num).toDouble(),
-      yearLengthEarthDays: (json['year_length_earth_days'] as num).toDouble(),
-      orbitalSpeedKmh: json['orbital_speed_kmh'],
-      atmosphereComposition: json['atmosphere_composition'],
-      moons: json['moons'],
-      image: json['image'],
-      description: json['description'],
+      name: json['name'].toString(),
+      orbitalDistanceKm: json['orbital_distance_km'].toString(),
+      equatorialRadiusKm: json['equatorial_radius_km'].toString(),
+      volumeKm3: json['volume_km3'].toString(),
+      massKg: json['mass_kg'].toString(),
+      densityGCm3: json['density_g_cm3'].toString(),
+      surfaceGravityMS2: json['surface_gravity_m_s2'].toString(),
+      escapeVelocityKmh: json['escape_velocity_kmh'].toString(),
+      dayLengthEarthDays: json['day_length_earth_days'].toString(),
+      yearLengthEarthDays: json['year_length_earth_days'].toString(),
+      orbitalSpeedKmh: json['orbital_speed_kmh'].toString(),
+      atmosphereComposition: json['atmosphere_composition'].toString(),
+      moons: json['moons'].toString(),
+      image: json['image'].toString(),
+      description: json['description'].toString(),
     );
   }
 }

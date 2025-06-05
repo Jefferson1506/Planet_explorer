@@ -132,7 +132,7 @@ class HomePage extends ConsumerWidget {
                   duration: Duration(seconds: 2),
                   child: CustomButton.gold(
                     label: 'Ver Planetas',
-                    onPressed: () => context.push('/not-found'),
+                    onPressed: () => context.push('/planets'),
                   ),
                 ),
               ),
