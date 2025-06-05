@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import 'package:lottie/lottie.dart';
 import 'dart:math';
 
@@ -127,14 +128,29 @@ class HomePage extends ConsumerWidget {
                     ),
                   ),
                 ),
-
                 Positioned(
                   bottom: view.scaledHeight(0.2),
                   child: AnimateWrapper.zoomIn(
                     duration: Duration(seconds: 2),
                     child: CustomButton.gold(
                       label: 'Ver Planetas',
-                      onPressed: () {},
+                      onPressed: () => context.push('/planets'),
+                    ),
+                  ),
+                ),
+
+                Positioned(
+                  top: view.scaledHeight(0.3),
+                  child: AnimateWrapper.zoomIn(
+                    duration: Duration(seconds: 2),
+                    child: Text(
+                      style: TextStyle(
+                        color: colorScheme.onPrimary,
+                        fontSize: view.isFontSize,
+                        fontStyle: FontStyle.italic,
+                      ),
+                      textAlign: TextAlign.center,
+                      'Bienvenido al Explorador Planetario \n Consulta información detallada sobre cada planeta \n del sistema solar y guarda tus favoritos',
                     ),
                   ),
                 ),
