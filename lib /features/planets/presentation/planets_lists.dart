@@ -7,12 +7,10 @@ class PlanetsLists extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: ResponsiveBuilder(
-        builder: (context, view) {
-          return Scaffold();
-        },
-      ),
+    return ResponsiveBuilder(
+      builder: (context, view) {
+        return Scaffold();
+      },
     );
   }
 }
