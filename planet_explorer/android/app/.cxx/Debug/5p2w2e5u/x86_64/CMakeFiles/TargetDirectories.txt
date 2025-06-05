@@ -1,2 +1,0 @@
-/home/jefferson/Documentos/Github/Planet_explorer/planet_explorer/android/app/.cxx/Debug/5p2w2e5u/x86_64/CMakeFiles/edit_cache.dir
-/home/jefferson/Documentos/Github/Planet_explorer/planet_explorer/android/app/.cxx/Debug/5p2w2e5u/x86_64/CMakeFiles/rebuild_cache.dir

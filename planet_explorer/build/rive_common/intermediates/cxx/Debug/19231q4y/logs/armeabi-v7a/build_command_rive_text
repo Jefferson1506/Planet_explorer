@@ -1,4 +1,0 @@
-/home/jefferson/Android/Sdk/cmake/3.22.1/bin/ninja \
-  -C \
-  /home/jefferson/.pub-cache/hosted/pub.dev/rive_common-0.4.15/android/.cxx/Debug/19231q4y/armeabi-v7a \
-  rive_text
