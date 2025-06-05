@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'core/providers/notifier/theme_prefernce_notifier.dart';
 import 'core/router/app_router.dart';
@@ -22,6 +23,7 @@ class MyApp extends ConsumerWidget {
       theme: colorTheme.lightTheme,
       darkTheme: colorTheme.darkTheme,
       routerConfig: router,
+      builder: EasyLoading.init(),
     );
   }
 }
