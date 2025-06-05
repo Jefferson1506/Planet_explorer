@@ -1,5 +1,3 @@
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-
 import '../../../core/http/endpoint.dart';
 import '../../../core/http/http_client.dart';
 import '../../../shared/widgets/easy_loanding.dart';
@@ -24,4 +22,3 @@ class PlanetsServices {
     return [];
   }
 }
-

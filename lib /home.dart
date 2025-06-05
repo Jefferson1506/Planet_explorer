@@ -1,22 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:lottie/lottie.dart';
+import 'package:provider/provider.dart';
 import 'dart:math';
 import 'core/providers/notifier/theme_prefernce_notifier.dart';
 import 'core/responsive/responsive_builder.dart';
 import 'shared/widgets/animate.dart';
 import 'shared/widgets/button.dart';
 
-class HomePage extends ConsumerWidget {
+class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context) {
     final random = Random();
     final colorScheme = Theme.of(context).colorScheme;
-    final listShadow = _shadow(colorScheme);
-    final themeMode = ref.watch(themeProvider);
+    final listShadow = _shadow(
+      colorScheme,
+    ); // Asumiendo que _shadow está definido
+    final themeNotifier = Provider.of<ThemeNotifier>(
+      context,
+    ); // Accedemos al ThemeNotifier
 
     return ResponsiveBuilder(
       builder: (context, view) {
@@ -32,15 +36,19 @@ class HomePage extends ConsumerWidget {
                   icon: Icon(
                     size: view.scaledFont(2.3),
                     color:
-                        themeMode == ThemeMode.dark
+                        themeNotifier.themeMode == ThemeMode.dark
                             ? Colors.limeAccent
                             : const Color.fromARGB(255, 166, 255, 248),
-                    themeMode == ThemeMode.dark
+                    themeNotifier.themeMode == ThemeMode.dark
                         ? Icons.wb_sunny
                         : Icons.nightlight_round,
                   ),
                   onPressed: () {
-                    ref.read(themeProvider.notifier).toggleTheme();
+                    // Cambiamos el tema usando Provider
+                    Provider.of<ThemeNotifier>(
+                      context,
+                      listen: false,
+                    ).toggleTheme();
                   },
                 ),
               ),
@@ -111,7 +119,6 @@ class HomePage extends ConsumerWidget {
                         left: view.scaledWidth(0.12),
                         child: _crater(view.scaledFont(0.7), listShadow),
                       ),
-
                       Positioned(
                         top: view.scaledHeight(0.4),
                         left: view.scaledWidth(0.2),
@@ -129,18 +136,17 @@ class HomePage extends ConsumerWidget {
               Positioned(
                 bottom: view.scaledHeight(0.2),
                 child: AnimateWrapper.zoomIn(
-                  duration: Duration(seconds: 2),
+                  duration: const Duration(seconds: 2),
                   child: CustomButton.gold(
                     label: 'Ver Planetas',
                     onPressed: () => context.push('/planets'),
                   ),
                 ),
               ),
-
               Positioned(
                 top: view.scaledHeight(0.4),
                 child: AnimateWrapper.zoomIn(
-                  duration: Duration(seconds: 2),
+                  duration: const Duration(seconds: 2),
                   child: Text(
                     style: TextStyle(
                       color: colorScheme.onPrimary,

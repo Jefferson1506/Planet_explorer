@@ -1,27 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'core/providers/notifier/theme_prefernce_notifier.dart';
 import 'core/router/app_router.dart';
-import 'shared/theme/theme_color.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const ProviderScope(child: MyApp()));
+  runApp(
+    MultiProvider(
+      providers: [ChangeNotifierProvider(create: (_) => ThemeNotifier())],
+      child: const MyApp(),
+    ),
+  );
 }
 
-class MyApp extends ConsumerWidget {
+class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final themeMode = ref.watch(themeProvider);
-    final colorTheme = ColorTheme();
+  Widget build(BuildContext context) {
+    final themeNotifier = Provider.of<ThemeNotifier>(context);
+
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       title: 'Planet Explorer',
-      themeMode: themeMode,
-      theme: colorTheme.lightTheme,
-      darkTheme: colorTheme.darkTheme,
+      themeMode: themeNotifier.themeMode,
+      theme: themeNotifier.lightTheme,
+      darkTheme: themeNotifier.darkTheme,
       routerConfig: router,
       builder: EasyLoading.init(),
     );

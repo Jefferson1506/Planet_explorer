@@ -1,17 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../../../core/responsive/responsive_builder.dart';
-
-class PlanetsLists extends ConsumerWidget {
+class PlanetsLists extends StatelessWidget {
   const PlanetsLists({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    return ResponsiveBuilder(
-      builder: (context, sizingInfo) {
-        return Scaffold(body: Container());
-      },
-    );
+  Widget build(BuildContext context) {
+    return Container();
   }
 }
