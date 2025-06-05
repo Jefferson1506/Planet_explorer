@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-
-import '../../features/planets/data/models/planet.dart';
 import '../../features/planets/presentation/planet_detail.dart';
 import '../../home.dart';
 import '../../features/planets/presentation/planets_lists.dart';
@@ -50,16 +48,14 @@ final GoRouter router = GoRouter(
       path: '/planets',
       builder: (context, state) => const PlanetsLists(),
     ),
-
     GoRoute(
-      path: '/planets/:planet',
+      path: '/planets/:planetName',
       builder: (context, state) {
-        final planet = state.pathParameters['planet']! as Planet;
-        return PlanetDetail(planet: planet);
+        final planetName = state.pathParameters['planetName']!;
+        return PlanetDetail(planetName: planetName);
       },
     ),
-
     GoRoute(path: '/not-found', builder: (context, state) => const NotFound()),
   ],
-  errorPageBuilder: (context, state) => MaterialPage(child: NotFound()),
+  errorPageBuilder: (context, state) => MaterialPage(child: const NotFound()),
 );

@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../data/models/planet.dart';
-
 class PlanetDetail extends StatelessWidget {
-  final Planet planet;
-  const PlanetDetail({super.key, required this.planet});
+  final String planetName;
+  const PlanetDetail({super.key, required this.planetName});
 
   @override
   Widget build(BuildContext context) {
