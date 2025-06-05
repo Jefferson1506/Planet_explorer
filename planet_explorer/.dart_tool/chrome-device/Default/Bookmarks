@@ -1,0 +1,69 @@
+{
+   "checksum": "ae5ac2598936e3aeb11de549c85f26ad",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13220503659818144",
+            "date_last_used": "0",
+            "guid": "e6311706-81dd-4715-879d-ca54ce134eef",
+            "id": "5",
+            "name": "Gmail",
+            "type": "url",
+            "url": "https://accounts.google.com/b/0/AddMailService"
+         }, {
+            "date_added": "13220503659818916",
+            "date_last_used": "0",
+            "guid": "b653dbf2-d926-4a38-a408-ee00bb5e6ad6",
+            "id": "6",
+            "name": "YouTube",
+            "type": "url",
+            "url": "https://youtube.com/"
+         }, {
+            "date_added": "13235265290870487",
+            "date_last_used": "0",
+            "guid": "d6c59ba6-4da9-47f2-8949-873e67494cc9",
+            "id": "7",
+            "name": "Twitch",
+            "type": "url",
+            "url": "https://www.twitch.tv/"
+         }, {
+            "date_added": "13238476006643772",
+            "date_last_used": "0",
+            "guid": "c51adf70-4117-4ec5-8752-c60f13f994a3",
+            "id": "8",
+            "name": "Ver One Piece Episodio 576 - AnimeFLV",
+            "type": "url",
+            "url": "https://www7.animeflv.cc/one-piece-tv-576"
+         } ],
+         "date_added": "13393472214352847",
+         "date_last_used": "0",
+         "date_modified": "13238476006643772",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Barra de marcadores",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13393472214352848",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Otros marcadores",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13393472214352850",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Marcadores móvil",
+         "type": "folder"
+      }
+   },
+   "sync_metadata": "CtEBCrABCIiBAhKpASAAkgGjAQqgAQoOY2hyb21lX3N5bmNfYm0SBTUxIWJtGhIJmtK4p7Q2BgARmtK4p7Q2BgAiNAnY+aKntDYGABADGcdjNuL/ydtfIAEqHDUxIWJtL2ZkOjkxNjM3MjM1NTk0Njg4OTMxNjEiNAnY+aKntDYGABADGcdjNuL/ydtfIAEqHDUxIWJtL2ZkOjkxNjM3MjM1NTk0Njg4OTMxNjEp1RW5p7Q2BgASACoYaDU0emI0QUJlWndKYkVrN0xhbEtnQT09SAMSrQIIBxKoAgoceVl4aDVtNmJiL1cyM2g2M1dFcFRpaXZTOXRJPRKmAVo6QURxdEFaejFHL29heTRqcGZaYkxEYmtUUDRLT1hjUDMraW1mWDVUVTRNZjJyZjdyUTFwakdlaVhaVTkvOWtlMWhtbGpTaUg5S2ZHckNzS2dnNEZ5RlhDN1pNUGtiYlRTS0xBd1VoT2NuRWdkQjNocWE1Y2gzcm8vVndjYnJRalN1SGVhTG9oaGZIUWVEeEpyWkVPWEEwM2gzQ04rdU5mMGdRPT0YACAAKAAwuLqBksqhhgM4vO+p27QuQLzvqdu0LkocZEE5VitiampOci9OaWhZcTFiMmlNL0NydUNNPVofIh27UVdncTNGQkZGMzJiTWhFOVJSU25VVUh4eGNFPWXjgMpqEq0CCAgSqAIKHGhXU0ZXTGtlYVpCdnJCaDdLc2ZWUndOdnNnOD0SpgFaOkFEcXRBWnoxRy9vYXk0anBmWmJMRGJrVFA0S09YY1AzK2ltZlg1VFU0TWYycmY3clF4WXJ3a21hVVpqUVV5SFlkQmVsbVlEdWcrUEpxckZ6MDdXUWdTYzVydmJHTDBYcktkanZaZkxQMkd3QllSaS9IZ2R6dWJHMk1wNmxUOHBSWlZDRkdiZ21sL21CQVcraVJKcmgzWFhKWEtkTS9ZNnZOZz09GAAgACgAMOuRzJLKoYYDOLzvqdu0LkC876nbtC5KHEdSaldlREszOUhBTWIrR2wxNlYvcEpKbnpudz1aHyId7mZ0RytkRXBzd0ZiaWxpZ0JtSFpBaFMrU0ladz1lAAAAABKsAggGEqcCChxHS3dmdk1pekphMzQ4clJNWmtNUFNnTzZId1E9EqYBWjpBRHF0QVp6MUcvb2F5NGpwZlpiTERia1RQNEtPWGNQMytpbWZYNVRVNE1mMnJmN3JROHVZNWtNbi83UzB6a0MyOXQ1QzMxaDhzY0dRbDVEOG5WRFZIQUtINmRITmkwZUJJM21IdHFDTkpBYXNiRHp2cGM3Nzk4a0ZmaC9LTU9OVUs3QXRuMEVTbkY3aGJZRnZ2OEJ3U2lhSWFOaWlBWVV4bUE9PRgAIAAoADC4uoGSyqGGAzi876nbtC5AvO+p27QuShwvQUZlSlM5U090OThHTGt5RWpMNnNNMDZjeFk9Wh4iHHZwdlNMMS9jMGhDMmdKNDRmTEhMaUNONTIzdz1lOP122xLDAQgDEr4BChxuamdEdTg4ZUNydlhwODZwRDdmSEdjcUZwODg9EmZaOkFEcXRBWnp2ZGJNV0JPSmJjMTFsRzJOVTlzcWp5TW8zWXRmUHB0aGQySVk1a3hsYWVDZC9QM1VHUDdQQng1WUZ2Q2VkZThGODVMd2NPNGNrUlFhazh6dkpBM3hCNjU0MlBBPT0YACAAKAAw2POLvcrWjQM4AEAAShx5ek5CMDFjbjU0QTdjUlUwdVQrL1BnbVR0VW89WgBlAAAAABKrAQgBEqYBChx5eEovNmZ2a2VjcjdrcDVFUXpCNHRXTHBkYkU9Ek5aOkFEcXRBWnorN3JFMDdoczhBTnRITG9XbFVnZFJlR1lITkVFZHMzUzhsU1BqOG1yUFJNZG1ldTRNc0xEZndiYnhuOXVVOGNvNW9NRFQYACAAKAAw2POLvcrWjQM4AEAAShxhUkNXTGdoRjliNUlucUtJRHZ1Si9qdlFrRmM9WgBlAAAAABKsAggFEqcCChwrNys2bzFZWkpJdEl4bmtYQ3RHb0NHR0VLTGs9EqYBWjpBRHF0QVp6MUcvb2F5NGpwZlpiTERia1RQNEtPWGNQMytpbWZYNVRVNE1mMnJmN3JReEFBMVN2SkFJVDNmOFcycGpuZGJLekkxOFUxOUxWK1Y3TjhKeWxvRFh1bGRYNER3VEpoamt1ck5MQm5xbkwwaG5LNG5VRzR3OVB4SzVxUkNoeHZTZGlzcEJDc0V1QVRLU2FPUGFRb3AxczB4RjVhY1E9PRgAIAAoADC4uoGSyqGGAzi876nbtC5AvO+p27QuShxralZQSTI5ZS92dzRKcGhQL2pVRGovTWFMNEU9Wh4iHGdGK2pJVmFkaHJlZ0owNWNkWFhzZit3am42QT1lB/vG1xLDAQgCEr4BChxZY1NUb252RVNQd3FDczRMMmNyVmh2NjhMOTg9EmZaOkFEcXRBWnlRQm1uOEt3ZWpNQUFmNmdHSkE5SEpiZjk5bGxBcGxTTys2aDZwOXpSWVR0NHplc3d3VG1NSkVIWGNSVnY4TjR5YWxLS1lqL1hDYXlyVk1JQko4c0Y4ZkhrR29RPT0YACAAKAAw2POLvcrWjQM4AEAAShxvUFZraHdCUmJWNjVLQ1dSMitJT05IV29PdTg9WgBlAAAAADABOAA=",
+   "version": 1
+}

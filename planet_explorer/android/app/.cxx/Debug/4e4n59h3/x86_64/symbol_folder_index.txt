@@ -1,0 +1,1 @@
+/home/jefferson/Documentos/Github/Planet_explorer/planet_explorer/build/app/intermediates/cxx/Debug/4e4n59h3/obj/x86_64

@@ -1,0 +1,1 @@
+ /home/jefferson/Documentos/Github/Planet_explorer/planet_explorer/.dart_tool/flutter_build/a88f8725140cd843d9796b22d909eacf/native_assets.json: 
