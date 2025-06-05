@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'core/providers/notifier/theme_prefernce_notifier.dart';
-import 'router/app_router.dart';
+import 'core/router/app_router.dart';
 import 'shared/theme/theme_color.dart';
 
 void main() {

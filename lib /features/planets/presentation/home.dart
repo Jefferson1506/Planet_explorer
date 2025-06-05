@@ -3,7 +3,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:lottie/lottie.dart';
 import 'dart:math';
-
 import '../../../core/providers/notifier/theme_prefernce_notifier.dart';
 import '../../../core/responsive/responsive_builder.dart';
 import '../../../shared/widgets/animate.dart';
@@ -23,10 +22,10 @@ class HomePage extends ConsumerWidget {
       child: ResponsiveBuilder(
         builder: (context, view) {
           return Scaffold(
+            backgroundColor: colorScheme.primary,
             body: Stack(
               alignment: Alignment.center,
               children: [
-                Container(color: colorScheme.primary),
                 Positioned(
                   top: view.scaledHeight(0.1),
                   right: view.scaledWidth(0.1),
@@ -52,7 +51,7 @@ class HomePage extends ConsumerWidget {
                       random.nextDouble() * MediaQuery.of(context).size.width;
                   final dy =
                       random.nextDouble() * MediaQuery.of(context).size.height;
-                  final size = random.nextDouble() * 2 + 1;
+                  final size = random.nextDouble() * 3 + 1;
 
                   return Positioned(
                     left: dx,
