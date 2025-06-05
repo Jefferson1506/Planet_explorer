@@ -1,21 +1,15 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
-enum AppTheme { light, dark }
-
 class ThemePreference {
-  static const _key = 'app_theme';
+  static const _key = 'is_dark_mode';
 
-  Future<void> saveTheme(AppTheme theme) async {
+  Future<void> saveTheme(bool isDarkMode) async {
     final prefs = await SharedPreferences.getInstance();
-    await prefs.setString(_key, theme.name);
+    await prefs.setBool(_key, isDarkMode);
   }
 
-  Future<AppTheme> getTheme() async {
+  Future<bool> getTheme() async {
     final prefs = await SharedPreferences.getInstance();
-    final themeString = prefs.getString(_key);
-    return AppTheme.values.firstWhere(
-      (e) => e.name == themeString,
-      orElse: () => AppTheme.light,
-    );
+    return prefs.getBool(_key) ?? false;
   }
 }
