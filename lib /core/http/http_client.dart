@@ -1,9 +1,9 @@
 import 'package:dio/dio.dart';
 
-class HttpClient {
+class HttpClientDio {
   late final Dio _dio;
 
-  HttpClient() {
+  HttpClientDio() {
     BaseOptions options = BaseOptions(
       baseUrl: 'https://us-central1-a-academia-espacial.cloudfunctions.net',
       connectTimeout: Duration(seconds: 10),
@@ -16,6 +16,6 @@ class HttpClient {
     );
     _dio = Dio(options);
   }
-  static final HttpClient _httpClient = HttpClient();
+  static final HttpClientDio _httpClient = HttpClientDio();
   static Dio get httpClient => _httpClient._dio;
 }
