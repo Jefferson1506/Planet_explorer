@@ -6,15 +6,28 @@ import '../data/models/planet.dart';
 class PlanetsServices {
   static final dio = HttpClientDio.httpClient;
 
-  static Future<List<Planet>> getPlanets() async {
+  static Future<List<Planet>> getPlanetsFiltered(String filter) async {
     try {
       EasyLoadingHelper.show(userInteractions: false);
+
       final response = await dio.get(Endpoints.planets);
+
       final data = response.data['data'] as List;
-      return data.map(((planet) => Planet.fromJson(planet))).toList();
+      final planets = data.map((planet) => Planet.fromJson(planet)).toList();
+
+      if (filter.isNotEmpty) {
+        return planets
+            .where(
+              (planet) =>
+                  planet.name.toLowerCase().contains(filter.toLowerCase()),
+            )
+            .toList();
+      }
+
+      return planets;
     } catch (e) {
       EasyLoadingHelper.showError(
-        message: 'Problema con el buscado general de los planetas',
+        message: 'Problema con el buscado de los planetas',
       );
     } finally {
       EasyLoadingHelper.dismiss();
