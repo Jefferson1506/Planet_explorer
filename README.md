@@ -1,29 +1,39 @@
-# Planet_explorer
-Prueba Tecnica (Tres astronautas) : Una aplicación Flutter para explorar planetas utilizando Riverpod, go_router y arquitectura limpia.
+# 🌍 Planet Explorer
 
+**Prueba Técnica (Tres Astronautas)**  
+Una aplicación Flutter moderna para explorar planetas utilizando datos de una API REST pública. Desarrollada con `Riverpod`, `go_router` y siguiendo principios de arquitectura limpia para asegurar escalabilidad, mantenibilidad y modularidad.
 
-# 🌍 Flutter Planet Explorer
+---
 
-Una aplicación Flutter responsiva que permite explorar planetas utilizando datos de una API REST pública. Implementa `Riverpod` para manejo de estado, `go_router` para navegación, y sigue una arquitectura limpia para facilitar su escalabilidad y mantenimiento.
+## 🚀 Funcionalidades principales
 
-## 🚀 Funcionalidades
+- 🌌 Listado interactivo de planetas obtenidos desde una API REST.
+- 🔍 Filtro dinámico por nombre, masa, distancia y otros parámetros.
+- 🪐 Vista detallada de cada planeta con información completa e imágenes.
+- ⭐ Gestión de favoritos almacenados localmente con `SharedPreferences`.
+- ⚠️ Redirección automática en caso de rutas erróneas o planeta inexistente.
+- 📱 Diseño completamente responsivo compatible con dispositivos móviles, tablets y escritorio.
 
-- Página principal con acceso al explorador de planetas.
-- Listado de planetas desde una API REST.
-- Filtro en tiempo real por nombre, masa, distancia, etc.
-- Vista detallada de cada planeta con datos completos e imagen.
-- Gestión de favoritos almacenados localmente (usando `SharedPreferences`).
-- Redirección automática en caso de error de ruta o planeta inexistente.
-- Diseño responsivo para móviles, tablets y escritorio.
+---
 
-## 🧰 Tecnologías y paquetes usados
+## 🧰 Tecnologías y paquetes utilizados
 
-- `Flutter`
-- `Flutter Riverpod` (estado)
-- `go_router` (navegación declarativa)
-- `Dio` (consumo de API)
-- `SharedPreferences` (persistencia local)
-- `ResponsiveBuilder` personalizado
+| Propósito              | Paquete                          |
+|------------------------|----------------------------------|
+| Manejo de estado       | `flutter_riverpod`               |
+| Navegación             | `go_router`                      |
+| Consumo de API         | `dio`                            |
+| Persistencia local     | `shared_preferences`             |
+| Animaciones            | `lottie`, `animate_do`           |
+| Carga y feedback       | `flutter_easyloading`            |
+| UI y diseño            | `carousel_slider`, `cupertino_icons` |
+| Responsive personalizado | Implementación propia           |
+
+---
+
+## 📁 Estructura del proyecto
+
+La aplicación está organizada siguiendo los principios de arquitectura limpia:
 
 ## 🧱 Arquitectura
 
@@ -31,7 +41,31 @@ Organizada en una arquitectura limpia:
 
 - **main.dart**: Punto de entrada de la aplicación.  
 - **core/**: Utilidades generales (responsive, providers, temas, etc.).  
-- **data/**: Implementación de acceso a datos (APIs, repositorios).  
-- **domain/**: Modelos y entidades del dominio (clases de negocio).  
+- **domain/**: Implementación de acceso a datos (APIs, repositorios).  
+- **data/**: Modelos y entidades del dominio (clases de negocio).  
 - **features/planets/**: Funcionalidad específica de Planetas con su lógica, dominio y presentación.  
 - **router/**: Configuración y definición de rutas usando go_router.
+- **shared/**: Componentes.
+
+
+
+---
+
+## 🛠️ Requisitos previos
+
+- Flutter SDK ≥ 3.7.0
+- Dart ≥ 3.x
+- Android Studio o VS Code con Flutter extension
+
+---
+
+## ▶️ Pasos para ejecutar la app
+
+1. **Clona este repositorio**:
+   ```bash
+   git clone https://github.com/tu_usuario/planet_explorer.git
+   cd planet_explorer
+
+flutter pub get
+
+flutter run
