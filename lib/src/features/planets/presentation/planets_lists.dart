@@ -88,9 +88,7 @@ class PlanetsLists extends StatelessWidget {
 
                             return GestureDetector(
                               onTap: () {
-                                context.push(
-                                  '/planets/arrr',
-                                );
+                                context.push('/planets/${planet.name}');
                               },
                               child: AnimateWrapper.zoomIn(
                                 child: Card(

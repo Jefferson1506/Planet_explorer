@@ -6,20 +6,26 @@ import 'package:shared_preferences/shared_preferences.dart';
 class PlanetDetailProvider extends ChangeNotifier {
   Planet? _planet;
   bool _isFavorite = false;
+  bool status = false; // para indicar que terminó de cargar (fetch)
 
   Planet? get planet => _planet;
   bool get isFavorite => _isFavorite;
 
   Future<void> fetchPlanetByName(String name) async {
     final planets = await PlanetsServices.getPlanetsFiltered(name);
-    _planet = planets.firstWhere(
-      (p) => p.name.toLowerCase() == name.toLowerCase(),
-    );
+    try {
+      _planet = planets.firstWhere(
+        (p) => p.name.toLowerCase() == name.toLowerCase(),
+      );
+    } catch (e) {
+      _planet = null;
+    }
 
     if (_planet != null) {
       await _loadFavoriteStatus();
     }
 
+    status = true; // indica que ya terminó de intentar cargar
     notifyListeners();
   }
 
