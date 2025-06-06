@@ -1,0 +1,1 @@
+ /home/jefferson/Documentos/Github/Planet_explorer/.dart_tool/flutter_build/638f9244bffd64a48cdefaa2016a1723/dart_build_result.json: 
