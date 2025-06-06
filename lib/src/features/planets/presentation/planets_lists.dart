@@ -89,7 +89,7 @@ class PlanetsLists extends StatelessWidget {
                             return GestureDetector(
                               onTap: () {
                                 context.push(
-                                  '/planets/${planet.name.toLowerCase()}',
+                                  '/planets/arrr',
                                 );
                               },
                               child: AnimateWrapper.zoomIn(
